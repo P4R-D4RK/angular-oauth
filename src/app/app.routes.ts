@@ -10,6 +10,7 @@ export const routes: Routes = [
   {
     canActivateChild: [privateGuard()],
     path: 'tasks',
+    loadComponent: () => import('./shared/ui/layout.component'),
     loadChildren: () => import('./tasks/features/task.routes'),
   },
   {
